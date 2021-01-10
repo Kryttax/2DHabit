@@ -1,0 +1,462 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Tiles/Tilesets/AbstractSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/World.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Tiles/Tilesets/LibraryFINALSet.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/TilemapSetup.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Camera.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/GUIManager.gd" type="Script" id=6]
+[ext_resource path="res://Serialization.gd" type="Script" id=7]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Ground" type="TileMap" parent="."]
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 128, 64 )
+cell_custom_transform = Transform2D( 64, 0, 0, 0, 0, 0 )
+format = 1
+tile_data = PoolIntArray( -393209, 9, 0, -327677, 9, 0, -262137, 9, 0, -262134, 9, 0, -196605, 9, 0, -196604, 9, 0, -196603, 9, 0, -196599, 9, 0, -196598, 9, 0, -196597, 9, 0, -131072, 9, 0, -131063, 9, 0, -131062, 9, 0, -131061, 9, 0, -131060, 9, 0, -131059, 9, 0, -65532, 9, 0, -65531, 9, 0, -65530, 9, 0, -65529, 9, 0, -65528, 9, 0, -65527, 9, 0, -65526, 9, 0, -65525, 9, 0, -65524, 9, 0, 65535, 9, 0, 1, 9, 0, 2, 9, 0, 3, 9, 0, 4, 9, 0, 5, 9, 0, 6, 9, 0, 7, 9, 0, 8, 9, 0, 9, 9, 0, 10, 9, 0, 11, 9, 0, 12, 9, 0, 13, 9, 0, 14, 9, 0, 15, 9, 0, 131071, 9, 0, 65536, 9, 0, 65537, 9, 0, 65538, 9, 0, 65539, 9, 0, 65540, 9, 0, 65541, 9, 0, 65542, 9, 0, 65543, 9, 0, 65544, 9, 0, 65545, 9, 0, 65546, 9, 0, 65547, 9, 0, 65548, 9, 0, 65549, 9, 0, 65550, 9, 0, 65551, 9, 0, 131074, 9, 0, 131075, 9, 0, 131076, 9, 0, 131077, 9, 0, 131078, 9, 0, 131079, 9, 0, 131080, 9, 0, 131081, 9, 0, 131082, 9, 0, 131083, 9, 0, 131084, 9, 0, 131085, 9, 0, 131086, 9, 0, 131087, 9, 0, 196610, 9, 0, 196611, 9, 0, 196612, 9, 0, 196613, 9, 0, 196614, 9, 0, 196615, 9, 0, 196616, 9, 0, 196617, 9, 0, 196618, 9, 0, 196619, 9, 0, 196620, 9, 0, 196621, 9, 0, 196622, 9, 0, 196623, 9, 0, 262146, 9, 0, 262147, 9, 0, 262148, 9, 0, 262149, 9, 0, 262150, 9, 0, 262151, 9, 0, 262152, 9, 0, 262153, 9, 0, 262154, 9, 0, 262155, 9, 0, 262156, 9, 0, 262157, 9, 0, 262158, 9, 0, 262159, 9, 0, 262160, 9, 0, 327680, 9, 0, 327681, 9, 0, 327682, 9, 0, 327683, 9, 0, 327684, 9, 0, 327685, 9, 0, 327686, 9, 0, 327687, 9, 0, 327688, 9, 0, 327689, 9, 0, 327690, 9, 0, 327691, 9, 0, 327692, 9, 0, 327693, 9, 0, 327694, 9, 0, 327695, 9, 0, 327698, 9, 0, 327699, 9, 0, 393217, 9, 0, 393218, 9, 0, 393219, 9, 0, 393220, 9, 0, 393221, 9, 0, 393222, 9, 0, 393223, 9, 0, 393224, 9, 0, 393225, 9, 0, 393226, 9, 0, 393227, 9, 0, 393228, 9, 0, 393229, 9, 0, 393230, 9, 0, 393231, 9, 0, 393232, 9, 0, 393237, 9, 0, 458754, 9, 0, 458755, 9, 0, 458756, 9, 0, 458757, 9, 0, 458758, 9, 0, 458759, 9, 0, 458760, 9, 0, 458761, 9, 0, 458762, 9, 0, 458763, 9, 0, 458764, 9, 0, 458765, 9, 0, 458766, 9, 0, 458767, 9, 0, 458768, 9, 0, 458771, 9, 0, 524289, 9, 0, 524290, 9, 0, 524291, 9, 0, 524292, 9, 0, 524293, 9, 0, 524294, 9, 0, 524295, 9, 0, 524296, 9, 0, 524297, 9, 0, 524298, 9, 0, 524299, 9, 0, 524300, 9, 0, 524301, 9, 0, 524302, 9, 0, 524303, 9, 0, 589827, 9, 0, 589828, 9, 0, 589829, 9, 0, 589830, 9, 0, 589831, 9, 0, 589832, 9, 0, 589833, 9, 0, 589834, 9, 0, 589835, 9, 0, 589836, 9, 0, 589837, 9, 0, 589838, 9, 0, 589839, 9, 0, 655360, 9, 0, 655363, 9, 0, 655364, 9, 0, 655365, 9, 0, 655366, 9, 0, 655367, 9, 0, 655368, 9, 0, 655369, 9, 0, 655370, 9, 0, 655371, 9, 0, 655372, 9, 0, 655373, 9, 0, 655374, 9, 0, 655375, 9, 0, 655376, 9, 0, 720898, 9, 0, 720899, 9, 0, 720900, 9, 0, 720901, 9, 0, 720902, 9, 0, 720903, 9, 0, 720904, 9, 0, 720905, 9, 0, 720906, 9, 0, 720907, 9, 0, 720908, 9, 0, 720909, 9, 0, 720910, 9, 0, 720911, 9, 0, 786435, 9, 0, 786438, 9, 0, 786439, 9, 0, 786440, 9, 0, 786441, 9, 0, 786442, 9, 0, 786443, 9, 0, 786444, 9, 0, 786445, 9, 0, 786446, 9, 0, 786447, 9, 0, 851974, 9, 0, 851975, 9, 0, 851976, 9, 0, 851977, 9, 0, 851978, 9, 0, 851979, 9, 0, 851980, 9, 0, 851981, 9, 0, 851982, 9, 0, 851983, 9, 0, 851984, 9, 0, 917506, 27, 0, 917507, 27, 0, 917508, 27, 0, 917512, 9, 0, 917515, 4, 0 )
+
+[node name="First" type="TileMap" parent="."]
+mode = 1
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 128, 64 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+centered_textures = true
+format = 1
+script = ExtResource( 4 )
+
+[node name="CameraPivot" type="Node2D" parent="."]
+position = Vector2( 178.869, 581.99 )
+
+[node name="Camera" type="Camera2D" parent="CameraPivot"]
+position = Vector2( -113.647, 41.9706 )
+current = true
+zoom = Vector2( 2, 2 )
+script = ExtResource( 5 )
+
+[node name="GUI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="GUI"]
+anchor_left = -23.3
+anchor_top = 1.0
+anchor_right = 26.375
+anchor_bottom = 29.475
+margin_left = 6.10352e-05
+margin_top = 980.0
+margin_right = -0.00012207
+size_flags_stretch_ratio = 2.76
+custom_constants/hseparation = 10
+columns = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="GUI/GridContainer"]
+margin_right = 100.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="GUI/GridContainer"]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="GUI/GridContainer"]
+margin_left = 220.0
+margin_right = 320.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="GUI/GridContainer"]
+margin_left = 330.0
+margin_right = 430.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="GUI/GridContainer"]
+margin_left = 440.0
+margin_right = 540.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button6" type="Button" parent="GUI/GridContainer"]
+margin_left = 550.0
+margin_right = 650.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button7" type="Button" parent="GUI/GridContainer"]
+margin_left = 660.0
+margin_right = 760.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button8" type="Button" parent="GUI/GridContainer"]
+margin_left = 770.0
+margin_right = 870.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button9" type="Button" parent="GUI/GridContainer"]
+margin_left = 880.0
+margin_right = 980.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button10" type="Button" parent="GUI/GridContainer"]
+margin_left = 990.0
+margin_right = 1090.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button11" type="Button" parent="GUI/GridContainer"]
+margin_left = 1100.0
+margin_right = 1200.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button12" type="Button" parent="GUI/GridContainer"]
+margin_left = 1210.0
+margin_right = 1310.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button13" type="Button" parent="GUI/GridContainer"]
+margin_left = 1320.0
+margin_right = 1420.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button14" type="Button" parent="GUI/GridContainer"]
+margin_left = 1430.0
+margin_right = 1530.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button15" type="Button" parent="GUI/GridContainer"]
+margin_left = 1540.0
+margin_right = 1640.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button16" type="Button" parent="GUI/GridContainer"]
+margin_left = 1650.0
+margin_right = 1750.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button17" type="Button" parent="GUI/GridContainer"]
+margin_left = 1760.0
+margin_right = 1860.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button18" type="Button" parent="GUI/GridContainer"]
+margin_left = 1870.0
+margin_right = 1970.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button19" type="Button" parent="GUI/GridContainer"]
+margin_top = 79.0
+margin_right = 100.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button20" type="Button" parent="GUI/GridContainer"]
+margin_left = 110.0
+margin_top = 79.0
+margin_right = 210.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button21" type="Button" parent="GUI/GridContainer"]
+margin_left = 220.0
+margin_top = 79.0
+margin_right = 320.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button22" type="Button" parent="GUI/GridContainer"]
+margin_left = 330.0
+margin_top = 79.0
+margin_right = 430.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button23" type="Button" parent="GUI/GridContainer"]
+margin_left = 440.0
+margin_top = 79.0
+margin_right = 540.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button24" type="Button" parent="GUI/GridContainer"]
+margin_left = 550.0
+margin_top = 79.0
+margin_right = 650.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button25" type="Button" parent="GUI/GridContainer"]
+margin_left = 660.0
+margin_top = 79.0
+margin_right = 760.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button26" type="Button" parent="GUI/GridContainer"]
+margin_left = 770.0
+margin_top = 79.0
+margin_right = 870.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button27" type="Button" parent="GUI/GridContainer"]
+margin_left = 880.0
+margin_top = 79.0
+margin_right = 980.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button28" type="Button" parent="GUI/GridContainer"]
+margin_left = 990.0
+margin_top = 79.0
+margin_right = 1090.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button29" type="Button" parent="GUI/GridContainer"]
+margin_left = 1100.0
+margin_top = 79.0
+margin_right = 1200.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button30" type="Button" parent="GUI/GridContainer"]
+margin_left = 1210.0
+margin_top = 79.0
+margin_right = 1310.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button31" type="Button" parent="GUI/GridContainer"]
+margin_left = 1320.0
+margin_top = 79.0
+margin_right = 1420.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button32" type="Button" parent="GUI/GridContainer"]
+margin_left = 1430.0
+margin_top = 79.0
+margin_right = 1530.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button33" type="Button" parent="GUI/GridContainer"]
+margin_left = 1540.0
+margin_top = 79.0
+margin_right = 1640.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button34" type="Button" parent="GUI/GridContainer"]
+margin_left = 1650.0
+margin_top = 79.0
+margin_right = 1750.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button35" type="Button" parent="GUI/GridContainer"]
+margin_left = 1760.0
+margin_top = 79.0
+margin_right = 1860.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button36" type="Button" parent="GUI/GridContainer"]
+margin_left = 1870.0
+margin_top = 79.0
+margin_right = 1970.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 100, 75 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SGButton" type="Button" parent="GUI"]
+margin_left = 831.0
+margin_top = 68.0
+margin_right = 989.0
+margin_bottom = 120.0
+text = "SAVE GAME"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NGButton" type="Button" parent="GUI"]
+margin_left = 638.178
+margin_top = 68.0
+margin_right = 796.178
+margin_bottom = 120.0
+text = "NEW GAME"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Serializer" type="Node2D" parent="."]
+script = ExtResource( 7 )
