@@ -48,13 +48,14 @@ func _unhandled_input (event):
 				objectsPlaced.append(tile_pos)
 				dic.append({"position": tile_pos, "id" : tile_id})
 				recent_placed_tile_pos = tile_pos
-			
+				
 			if event.button_index == BUTTON_RIGHT:
 				picked_obj_index_INITIAL = -1
 				picked_obj_index = -1
 				PLACEMENT_MODE = false
 				if(tile_pos != recent_placed_tile_pos):
 					firstTiles.set_cellv(tile_pos, -1)
+					dic.append({"position": tile_pos, "id" : -1})
 		else:
 			if event.button_index == BUTTON_WHEEL_UP and PLACEMENT_MODE:
 				rotate_object_backwards()
@@ -68,27 +69,25 @@ func _unhandled_input (event):
 		#Get mouse position relative to camera offset
 		var pos = get_local_mouse_position()
 		current_tile_pos = groundTiles.world_to_map(pos)
-		
+		print(current_tile_pos)
 		#Check if cell is empty
-		if (PLACEMENT_MODE and firstTiles.get_cellv(current_tile_pos) == -1 and groundTiles.get_cellv(current_tile_pos) != -1):
-			if (prev_tile_pos != current_tile_pos):
-				#print("Prev tile pos: ", prev_tile_pos)
-				#print("Current tile pos: ", current_tile_pos)
-				if(recent_placed_tile_pos == prev_tile_pos):
-					print("Object recently placed in previous position.")
-					prev_tile_pos = current_tile_pos
-					recent_placed_tile_pos = null
-				else:
-					#Get hand object (from tile at the moment)
-					#var tile_id = firstTiles.tile_set.find_tile_by_name("longTable_S")
-					var tile_id = picked_obj_index
-					
-					firstTiles.set_cellv(prev_tile_pos, -1)
-					firstTiles.set_cellv(current_tile_pos, tile_id)
-					prev_tile_pos = current_tile_pos
-					recent_placed_tile_pos = null
-#			else:
-#				print("Mouse already in this cell")
+		if (PLACEMENT_MODE):
+			if(groundTiles.get_cellv(current_tile_pos) == -1 and recent_placed_tile_pos == null):
+				firstTiles.set_cellv(prev_tile_pos, -1)
+			if (firstTiles.get_cellv(current_tile_pos) == -1 and groundTiles.get_cellv(current_tile_pos) != -1):
+				if (prev_tile_pos != current_tile_pos):
+					if(recent_placed_tile_pos == prev_tile_pos):
+						print("Object recently placed in previous position.")
+						prev_tile_pos = current_tile_pos
+						recent_placed_tile_pos = null
+					else:
+						#Get hand object (from tile at the moment)
+						var tile_id = picked_obj_index
+						
+						firstTiles.set_cellv(prev_tile_pos, -1)
+						firstTiles.set_cellv(current_tile_pos, tile_id)
+						prev_tile_pos = current_tile_pos
+						recent_placed_tile_pos = null
 			
 
 func pick_object(var objectIndex : int):

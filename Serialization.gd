@@ -1,12 +1,9 @@
 extends Node
-
 var save_file = "user://map_save_game.save"
 
 onready var Global = get_parent()
 var ObjectsToSave = []
 var ObjectsToLoad = null
-
-
 
 func save_to_file():
 	var file = File.new()
