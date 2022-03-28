@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/toilet.obj-c0e700ab54b6ef8c8e9a6d9bf64dfeaa.mesh"
+
+[deps]
+
+files=[ "res://.import/toilet.obj-c0e700ab54b6ef8c8e9a6d9bf64dfeaa.mesh" ]
+
+source_file="res://Assets/furniturekit/Models/OBJ format/toilet.obj"
+dest_files=[ "res://.import/toilet.obj-c0e700ab54b6ef8c8e9a6d9bf64dfeaa.mesh", "res://.import/toilet.obj-c0e700ab54b6ef8c8e9a6d9bf64dfeaa.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

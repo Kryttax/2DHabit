@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/washer.obj-c3048d716f68893dea5cef36e2f05a05.mesh"
+
+[deps]
+
+files=[ "res://.import/washer.obj-c3048d716f68893dea5cef36e2f05a05.mesh" ]
+
+source_file="res://Assets/furniturekit/Models/OBJ format/washer.obj"
+dest_files=[ "res://.import/washer.obj-c3048d716f68893dea5cef36e2f05a05.mesh", "res://.import/washer.obj-c3048d716f68893dea5cef36e2f05a05.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

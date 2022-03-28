@@ -43,7 +43,6 @@ func _unhandled_input (event):
 				#var tile_id = firstTiles.tile_set.find_tile_by_name("longTable_S")
 				var tile_id = picked_obj_index
 				print("Adding one tile...")
-				#var p=groundTiles.world_to_map(pos)+Vector2(0,-1)
 				firstTiles.set_cellv(tile_pos, tile_id)
 				objectsPlaced.append(tile_pos)
 				dic.append({"position": tile_pos, "id" : tile_id})
@@ -56,11 +55,12 @@ func _unhandled_input (event):
 				if(tile_pos != recent_placed_tile_pos):
 					firstTiles.set_cellv(tile_pos, -1)
 					dic.append({"position": tile_pos, "id" : -1})
-		else:
-			if event.button_index == BUTTON_WHEEL_UP and PLACEMENT_MODE:
-				rotate_object_backwards()
-			if event.button_index == BUTTON_WHEEL_DOWN and PLACEMENT_MODE:
-				rotate_object_forward()
+
+	
+	if (!Input.is_key_pressed(KEY_CONTROL)) and event.is_action_pressed("ui_wheel_up") and PLACEMENT_MODE:
+		rotate_object_backwards()
+	if !Input.is_key_pressed(KEY_CONTROL) and event.is_action_pressed("ui_wheel_down") and PLACEMENT_MODE:
+		rotate_object_forward()
 	
 	
 	
@@ -69,7 +69,7 @@ func _unhandled_input (event):
 		#Get mouse position relative to camera offset
 		var pos = get_local_mouse_position()
 		current_tile_pos = groundTiles.world_to_map(pos)
-		print(current_tile_pos)
+		#print(current_tile_pos)
 		#Check if cell is empty
 		if (PLACEMENT_MODE):
 			if(groundTiles.get_cellv(current_tile_pos) == -1 and recent_placed_tile_pos == null):

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/floorFull.obj-44e555b12023146dcd822b4bfb26f00e.mesh"
+
+[deps]
+
+files=[ "res://.import/floorFull.obj-44e555b12023146dcd822b4bfb26f00e.mesh" ]
+
+source_file="res://Assets/furniturekit/Models/OBJ format/floorFull.obj"
+dest_files=[ "res://.import/floorFull.obj-44e555b12023146dcd822b4bfb26f00e.mesh", "res://.import/floorFull.obj-44e555b12023146dcd822b4bfb26f00e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

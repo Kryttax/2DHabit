@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/chairCushion.obj-ca9c4126b97727b7941c21a7fd70cad5.mesh"
+
+[deps]
+
+files=[ "res://.import/chairCushion.obj-ca9c4126b97727b7941c21a7fd70cad5.mesh" ]
+
+source_file="res://Assets/furniturekit/Models/OBJ format/chairCushion.obj"
+dest_files=[ "res://.import/chairCushion.obj-ca9c4126b97727b7941c21a7fd70cad5.mesh", "res://.import/chairCushion.obj-ca9c4126b97727b7941c21a7fd70cad5.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

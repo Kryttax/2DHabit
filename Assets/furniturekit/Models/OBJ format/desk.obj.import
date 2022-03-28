@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/desk.obj-3be3a0d1c2a49b3d23c3f557f4a1e3dd.mesh"
+
+[deps]
+
+files=[ "res://.import/desk.obj-3be3a0d1c2a49b3d23c3f557f4a1e3dd.mesh" ]
+
+source_file="res://Assets/furniturekit/Models/OBJ format/desk.obj"
+dest_files=[ "res://.import/desk.obj-3be3a0d1c2a49b3d23c3f557f4a1e3dd.mesh", "res://.import/desk.obj-3be3a0d1c2a49b3d23c3f557f4a1e3dd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

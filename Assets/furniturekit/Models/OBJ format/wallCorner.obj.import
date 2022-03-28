@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wallCorner.obj-0962456b2c761d4fae14d8ea8325e648.mesh"
+
+[deps]
+
+files=[ "res://.import/wallCorner.obj-0962456b2c761d4fae14d8ea8325e648.mesh" ]
+
+source_file="res://Assets/furniturekit/Models/OBJ format/wallCorner.obj"
+dest_files=[ "res://.import/wallCorner.obj-0962456b2c761d4fae14d8ea8325e648.mesh", "res://.import/wallCorner.obj-0962456b2c761d4fae14d8ea8325e648.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

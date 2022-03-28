@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/bookcaseClosedDoors.obj-f3864fb34721572a33d8ed7d7676dae3.mesh"
+
+[deps]
+
+files=[ "res://.import/bookcaseClosedDoors.obj-f3864fb34721572a33d8ed7d7676dae3.mesh" ]
+
+source_file="res://Assets/furniturekit/Models/OBJ format/bookcaseClosedDoors.obj"
+dest_files=[ "res://.import/bookcaseClosedDoors.obj-f3864fb34721572a33d8ed7d7676dae3.mesh", "res://.import/bookcaseClosedDoors.obj-f3864fb34721572a33d8ed7d7676dae3.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

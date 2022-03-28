@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/kitchenCabinetDrawer.obj-19d93774eb3757e4c87d704502cef02c.mesh"
+
+[deps]
+
+files=[ "res://.import/kitchenCabinetDrawer.obj-19d93774eb3757e4c87d704502cef02c.mesh" ]
+
+source_file="res://Assets/furniturekit/Models/OBJ format/kitchenCabinetDrawer.obj"
+dest_files=[ "res://.import/kitchenCabinetDrawer.obj-19d93774eb3757e4c87d704502cef02c.mesh", "res://.import/kitchenCabinetDrawer.obj-19d93774eb3757e4c87d704502cef02c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

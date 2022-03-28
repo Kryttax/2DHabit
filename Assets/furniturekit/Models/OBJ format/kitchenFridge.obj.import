@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/kitchenFridge.obj-d9b17a26fadb5a81d44c2123b848107c.mesh"
+
+[deps]
+
+files=[ "res://.import/kitchenFridge.obj-d9b17a26fadb5a81d44c2123b848107c.mesh" ]
+
+source_file="res://Assets/furniturekit/Models/OBJ format/kitchenFridge.obj"
+dest_files=[ "res://.import/kitchenFridge.obj-d9b17a26fadb5a81d44c2123b848107c.mesh", "res://.import/kitchenFridge.obj-d9b17a26fadb5a81d44c2123b848107c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
