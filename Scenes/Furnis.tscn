@@ -1,0 +1,484 @@
+[gd_scene load_steps=97 format=2]
+
+[ext_resource path="res://Assets/dungeon/Isometric/chair_E.png" type="Texture" id=1]
+[ext_resource path="res://Assets/dungeon/Isometric/planksHole_E.png" type="Texture" id=2]
+[ext_resource path="res://Assets/dungeon/Isometric/chair_S.png" type="Texture" id=3]
+[ext_resource path="res://Assets/dungeon/Isometric/bridge_S.png" type="Texture" id=4]
+[ext_resource path="res://Assets/dungeon/Isometric/bridgeBroken_N.png" type="Texture" id=5]
+[ext_resource path="res://Assets/dungeon/Isometric/planks_W.png" type="Texture" id=6]
+[ext_resource path="res://Assets/dungeon/Isometric/planksBroken_E.png" type="Texture" id=7]
+[ext_resource path="res://Assets/dungeon/Isometric/chair_N.png" type="Texture" id=8]
+[ext_resource path="res://Assets/dungeon/Isometric/barrels_S.png" type="Texture" id=9]
+[ext_resource path="res://Assets/dungeon/Isometric/barrelsStacked_S.png" type="Texture" id=10]
+[ext_resource path="res://Assets/dungeon/Isometric/chestOpen_W.png" type="Texture" id=11]
+[ext_resource path="res://Assets/dungeon/Isometric/barrelsStacked_W.png" type="Texture" id=12]
+[ext_resource path="res://Assets/dungeon/Isometric/bridgeBroken_W.png" type="Texture" id=13]
+[ext_resource path="res://Assets/dungeon/Isometric/barrels_E.png" type="Texture" id=14]
+[ext_resource path="res://Assets/dungeon/Isometric/barrel_E.png" type="Texture" id=15]
+[ext_resource path="res://Assets/dungeon/Isometric/planks_E.png" type="Texture" id=16]
+[ext_resource path="res://Assets/dungeon/Isometric/barrel_N.png" type="Texture" id=17]
+[ext_resource path="res://Assets/dungeon/Isometric/planks_S.png" type="Texture" id=18]
+[ext_resource path="res://Assets/dungeon/Isometric/planksHole_S.png" type="Texture" id=19]
+[ext_resource path="res://Assets/dungeon/Isometric/barrel_W.png" type="Texture" id=20]
+[ext_resource path="res://Assets/dungeon/Isometric/barrelsStacked_N.png" type="Texture" id=21]
+[ext_resource path="res://Assets/dungeon/Isometric/planksBroken_N.png" type="Texture" id=22]
+[ext_resource path="res://Assets/dungeon/Isometric/planksBroken_S.png" type="Texture" id=23]
+[ext_resource path="res://Assets/dungeon/Isometric/barrel_S.png" type="Texture" id=24]
+[ext_resource path="res://Assets/dungeon/Isometric/chestClosed_E.png" type="Texture" id=25]
+[ext_resource path="res://Assets/dungeon/Isometric/bridgeBroken_S.png" type="Texture" id=26]
+[ext_resource path="res://Assets/dungeon/Isometric/planksHole_W.png" type="Texture" id=27]
+[ext_resource path="res://Assets/dungeon/Isometric/chestClosed_W.png" type="Texture" id=28]
+[ext_resource path="res://Assets/dungeon/Isometric/planksHole_N.png" type="Texture" id=29]
+[ext_resource path="res://Assets/dungeon/Isometric/chestClosed_S.png" type="Texture" id=30]
+[ext_resource path="res://Assets/dungeon/Isometric/planks_N.png" type="Texture" id=31]
+[ext_resource path="res://Assets/dungeon/Isometric/barrels_N.png" type="Texture" id=32]
+[ext_resource path="res://Assets/dungeon/Isometric/bridge_W.png" type="Texture" id=33]
+[ext_resource path="res://Assets/dungeon/Isometric/bridge_E.png" type="Texture" id=34]
+[ext_resource path="res://Assets/dungeon/Isometric/chestOpen_S.png" type="Texture" id=35]
+[ext_resource path="res://Assets/dungeon/Isometric/chair_W.png" type="Texture" id=36]
+[ext_resource path="res://Assets/dungeon/Isometric/chestClosed_N.png" type="Texture" id=37]
+[ext_resource path="res://Assets/dungeon/Isometric/bridgeBroken_E.png" type="Texture" id=38]
+[ext_resource path="res://Assets/dungeon/Isometric/chestOpen_E.png" type="Texture" id=39]
+[ext_resource path="res://Assets/dungeon/Isometric/barrels_W.png" type="Texture" id=40]
+[ext_resource path="res://Assets/dungeon/Isometric/planksBroken_W.png" type="Texture" id=41]
+[ext_resource path="res://Assets/dungeon/Isometric/chestOpen_N.png" type="Texture" id=42]
+[ext_resource path="res://Assets/dungeon/Isometric/bridge_N.png" type="Texture" id=43]
+[ext_resource path="res://Assets/dungeon/Isometric/barrelsStacked_E.png" type="Texture" id=44]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenCrate_W.png" type="Texture" id=45]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenCrate_N.png" type="Texture" id=46]
+[ext_resource path="res://Assets/dungeon/Isometric/tableChairsBroken_N.png" type="Texture" id=47]
+[ext_resource path="res://Assets/dungeon/Isometric/tableShort_E.png" type="Texture" id=48]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenCrate_E.png" type="Texture" id=49]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupportsBlock_N.png" type="Texture" id=50]
+[ext_resource path="res://Assets/dungeon/Isometric/tableChairsBroken_S.png" type="Texture" id=51]
+[ext_resource path="res://Assets/dungeon/Isometric/tableRound_E.png" type="Texture" id=52]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupports_E.png" type="Texture" id=53]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenCrates_S.png" type="Texture" id=54]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenCrate_S.png" type="Texture" id=55]
+[ext_resource path="res://Assets/dungeon/Isometric/tableRound_S.png" type="Texture" id=56]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupportBeams_S.png" type="Texture" id=57]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupports_N.png" type="Texture" id=58]
+[ext_resource path="res://Assets/dungeon/Isometric/tableShortChairs_E.png" type="Texture" id=59]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupportsBlock_E.png" type="Texture" id=60]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupportsBeam_S.png" type="Texture" id=61]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupportsBeam_E.png" type="Texture" id=62]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupportsBeam_W.png" type="Texture" id=63]
+[ext_resource path="res://Assets/dungeon/Isometric/tableRound_W.png" type="Texture" id=64]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupportBeams_E.png" type="Texture" id=65]
+[ext_resource path="res://Assets/dungeon/Isometric/tableShortChairs_N.png" type="Texture" id=66]
+[ext_resource path="res://Assets/dungeon/Isometric/tableShortChairs_S.png" type="Texture" id=67]
+[ext_resource path="res://Assets/dungeon/Isometric/tableRoundChairs_N.png" type="Texture" id=68]
+[ext_resource path="res://Assets/dungeon/Isometric/tableRoundItemsChairs_S.png" type="Texture" id=69]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupportBeams_W.png" type="Texture" id=70]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenPile_N.png" type="Texture" id=71]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupports_W.png" type="Texture" id=72]
+[ext_resource path="res://Assets/dungeon/Isometric/tableRoundChairs_W.png" type="Texture" id=73]
+[ext_resource path="res://Assets/dungeon/Isometric/tableRoundItemsChairs_W.png" type="Texture" id=74]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenCrates_W.png" type="Texture" id=75]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenCrates_N.png" type="Texture" id=76]
+[ext_resource path="res://Assets/dungeon/Isometric/tableRoundChairs_S.png" type="Texture" id=77]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupports_S.png" type="Texture" id=78]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupportsBlock_W.png" type="Texture" id=79]
+[ext_resource path="res://Assets/dungeon/Isometric/tableShort_W.png" type="Texture" id=80]
+[ext_resource path="res://Assets/dungeon/Isometric/tableShortChairs_W.png" type="Texture" id=81]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenPile_S.png" type="Texture" id=82]
+[ext_resource path="res://Assets/dungeon/Isometric/tableRoundChairs_E.png" type="Texture" id=83]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupportBeams_N.png" type="Texture" id=84]
+[ext_resource path="res://Assets/dungeon/Isometric/tableRound_N.png" type="Texture" id=85]
+[ext_resource path="res://Assets/dungeon/Isometric/tableRoundItemsChairs_N.png" type="Texture" id=86]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenPile_W.png" type="Texture" id=87]
+[ext_resource path="res://Assets/dungeon/Isometric/tableRoundItemsChairs_E.png" type="Texture" id=88]
+[ext_resource path="res://Assets/dungeon/Isometric/tableChairsBroken_W.png" type="Texture" id=89]
+[ext_resource path="res://Assets/dungeon/Isometric/tableShort_S.png" type="Texture" id=90]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupportsBlock_S.png" type="Texture" id=91]
+[ext_resource path="res://Assets/dungeon/Isometric/tableChairsBroken_E.png" type="Texture" id=92]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenPile_E.png" type="Texture" id=93]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenCrates_E.png" type="Texture" id=94]
+[ext_resource path="res://Assets/dungeon/Isometric/tableShort_N.png" type="Texture" id=95]
+[ext_resource path="res://Assets/dungeon/Isometric/woodenSupportsBeam_N.png" type="Texture" id=96]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="barrelsStacked_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 44 )
+
+[node name="barrelsStacked_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 21 )
+
+[node name="barrelsStacked_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 10 )
+
+[node name="barrelsStacked_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 12 )
+
+[node name="barrels_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 14 )
+
+[node name="barrels_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 32 )
+
+[node name="barrels_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 9 )
+
+[node name="barrels_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 40 )
+
+[node name="barrel_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 15 )
+
+[node name="barrel_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 17 )
+
+[node name="barrel_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 24 )
+
+[node name="barrel_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 20 )
+
+[node name="bridgeBroken_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 38 )
+
+[node name="bridgeBroken_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 5 )
+
+[node name="bridgeBroken_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 26 )
+
+[node name="bridgeBroken_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 13 )
+
+[node name="bridge_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 34 )
+
+[node name="bridge_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 43 )
+
+[node name="bridge_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 4 )
+
+[node name="bridge_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 33 )
+
+[node name="chair_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 1 )
+
+[node name="chair_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 8 )
+
+[node name="chair_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 3 )
+
+[node name="chair_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 36 )
+
+[node name="chestClosed_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 25 )
+
+[node name="chestClosed_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 37 )
+
+[node name="chestClosed_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 30 )
+
+[node name="chestClosed_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 28 )
+
+[node name="chestOpen_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 39 )
+
+[node name="chestOpen_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 42 )
+
+[node name="chestOpen_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 35 )
+
+[node name="chestOpen_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 11 )
+
+[node name="planksBroken_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 7 )
+
+[node name="planksBroken_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 22 )
+
+[node name="planksBroken_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 23 )
+
+[node name="planksBroken_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 41 )
+
+[node name="planksHole_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 2 )
+
+[node name="planksHole_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 29 )
+
+[node name="planksHole_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 19 )
+
+[node name="planksHole_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 27 )
+
+[node name="planks_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 16 )
+
+[node name="planks_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 31 )
+
+[node name="planks_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 18 )
+
+[node name="planks_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 6 )
+
+[node name="tableChairsBroken_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 92 )
+
+[node name="tableChairsBroken_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 47 )
+
+[node name="tableChairsBroken_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 51 )
+
+[node name="tableChairsBroken_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 89 )
+
+[node name="tableRoundChairs_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 83 )
+
+[node name="tableRoundChairs_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 68 )
+
+[node name="tableRoundChairs_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 77 )
+
+[node name="tableRoundChairs_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 73 )
+
+[node name="tableRoundItemsChairs_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 88 )
+
+[node name="tableRoundItemsChairs_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 86 )
+
+[node name="tableRoundItemsChairs_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 69 )
+
+[node name="tableRoundItemsChairs_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 74 )
+
+[node name="tableRound_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 52 )
+
+[node name="tableRound_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 85 )
+
+[node name="tableRound_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 56 )
+
+[node name="tableRound_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 64 )
+
+[node name="tableShortChairs_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 59 )
+
+[node name="tableShortChairs_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 66 )
+
+[node name="tableShortChairs_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 67 )
+
+[node name="tableShortChairs_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 81 )
+
+[node name="tableShort_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 48 )
+
+[node name="tableShort_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 95 )
+
+[node name="tableShort_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 90 )
+
+[node name="tableShort_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 80 )
+
+[node name="woodenCrates_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 94 )
+
+[node name="woodenCrates_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 76 )
+
+[node name="woodenCrates_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 54 )
+
+[node name="woodenCrates_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 75 )
+
+[node name="woodenCrate_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 49 )
+
+[node name="woodenCrate_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 46 )
+
+[node name="woodenCrate_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 55 )
+
+[node name="woodenCrate_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 45 )
+
+[node name="woodenPile_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 93 )
+
+[node name="woodenPile_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 71 )
+
+[node name="woodenPile_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 82 )
+
+[node name="woodenPile_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 87 )
+
+[node name="woodenSupportBeams_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 65 )
+
+[node name="woodenSupportBeams_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 84 )
+
+[node name="woodenSupportBeams_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 57 )
+
+[node name="woodenSupportBeams_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 70 )
+
+[node name="woodenSupportsBeam_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 62 )
+
+[node name="woodenSupportsBeam_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 96 )
+
+[node name="woodenSupportsBeam_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 61 )
+
+[node name="woodenSupportsBeam_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 63 )
+
+[node name="woodenSupportsBlock_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 60 )
+
+[node name="woodenSupportsBlock_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 50 )
+
+[node name="woodenSupportsBlock_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 91 )
+
+[node name="woodenSupportsBlock_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 79 )
+
+[node name="woodenSupports_E" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 53 )
+
+[node name="woodenSupports_N" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 58 )
+
+[node name="woodenSupports_S" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 78 )
+
+[node name="woodenSupports_W" type="Sprite" parent="."]
+position = Vector2( 13.7556, -75.5716 )
+texture = ExtResource( 72 )
