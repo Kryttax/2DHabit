@@ -1,13 +1,14 @@
 extends Node2D
 
 onready var serializer = $Serializer
+onready var catalogue = get_node("CanvasLayer/Catalogue")
 
 var current_floor = 0
 var total_floors = 2
 
 onready var level0 = get_current_floor()
 onready var groundTiles = get_current_floor().get_node("Floor")
-onready var firstTiles = groundTiles.get_node("Furni")
+onready var furniTiles = groundTiles.get_node("Furni")
 
 var prev_tile_pos = null
 var recent_placed_tile_pos = null
@@ -25,9 +26,15 @@ var dic = []
 
 
 func change_floor(sum):
-	if(current_floor >= 0 and current_floor < total_floors):
+	if(current_floor + sum >= 0 and current_floor + sum < total_floors):
 		current_floor += sum
-
+		setTilesRefs()
+		
+func setTilesRefs():
+	groundTiles = get_current_floor().get_node("Floor")
+	furniTiles = groundTiles.get_node("Furni")
+	furniTiles._update_offsets(true)
+	
 func get_current_floor():
 	return get_node("Level" + String(current_floor))
 	
@@ -40,21 +47,21 @@ func _ready():
 	prev_tile_pos = current_tile_pos
 	
 	# pre-save all map currently showed
-#	var pre_used = firstTiles.get_used_cells()
+#	var pre_used = furniTiles.get_used_cells()
 #	for usedTile in pre_used.size():
-#		dic.append({"position": usedTile, "id" : firstTiles.get_cellv(pre_used[usedTile])})
-#		print(firstTiles.get_cellv(pre_used[usedTile]))
+#		dic.append({"position": usedTile, "id" : furniTiles.get_cellv(pre_used[usedTile])})
+#		print(furniTiles.get_cellv(pre_used[usedTile]))
 	
 	var loaded_map = serializer.load_from_file()
 	if(loaded_map != null):
 		for tile in loaded_map.size():
-			firstTiles.set_cellv(loaded_map[tile]["position"], loaded_map[tile]["id"])
+			furniTiles.set_cellv(loaded_map[tile]["position"], loaded_map[tile]["id"])
 			dic.append({"position": loaded_map[tile]["position"], "id" : loaded_map[tile]["id"]})
 		dic = loaded_map
 
 func clear_map():
 	dic.clear()
-	firstTiles.clear()
+	furniTiles.clear()
 
 func _unhandled_input (event):
 	
@@ -64,10 +71,10 @@ func _unhandled_input (event):
 			var tile_pos = groundTiles.world_to_map(pos)
 			
 			if event.button_index == BUTTON_LEFT and PLACEMENT_MODE:
-				#var tile_id = firstTiles.tile_set.find_tile_by_name("longTable_S")
+				#var tile_id = furniTiles.tile_set.find_tile_by_name("longTable_S")
 				var tile_id = picked_obj_index
 				print("Adding one tile...")
-				firstTiles.set_cellv(tile_pos, tile_id)
+				furniTiles.set_cellv(tile_pos, tile_id)
 				objectsPlaced.append(tile_pos)
 				dic.append({"position": tile_pos, "id" : tile_id})
 				recent_placed_tile_pos = tile_pos
@@ -77,7 +84,7 @@ func _unhandled_input (event):
 				picked_obj_index = -1
 				PLACEMENT_MODE = false
 				if(tile_pos != recent_placed_tile_pos):
-					firstTiles.set_cellv(tile_pos, -1)
+					furniTiles.set_cellv(tile_pos, -1)
 					dic.append({"position": tile_pos, "id" : -1})
 
 	
@@ -97,8 +104,8 @@ func _unhandled_input (event):
 		#Check if cell is empty
 		if (PLACEMENT_MODE):
 			if(groundTiles.get_cellv(current_tile_pos) == -1 and recent_placed_tile_pos == null):
-				firstTiles.set_cellv(prev_tile_pos, -1)
-			if (firstTiles.get_cellv(current_tile_pos) == -1 and groundTiles.get_cellv(current_tile_pos) != -1):
+				furniTiles.set_cellv(prev_tile_pos, -1)
+			if (furniTiles.get_cellv(current_tile_pos) == -1 and groundTiles.get_cellv(current_tile_pos) != -1):
 				if (prev_tile_pos != current_tile_pos):
 					if(recent_placed_tile_pos == prev_tile_pos):
 						print("Object recently placed in previous position.")
@@ -108,8 +115,8 @@ func _unhandled_input (event):
 						#Get hand object (from tile at the moment)
 						var tile_id = picked_obj_index
 						
-						firstTiles.set_cellv(prev_tile_pos, -1)
-						firstTiles.set_cellv(current_tile_pos, tile_id)
+						furniTiles.set_cellv(prev_tile_pos, -1)
+						furniTiles.set_cellv(current_tile_pos, tile_id)
 						prev_tile_pos = current_tile_pos
 						recent_placed_tile_pos = null
 			
@@ -137,15 +144,15 @@ func rotate_object_forward():
 		#Back to the beginning
 		picked_obj_index = picked_obj_index_INITIAL
 		#Update picked object with new tile sprite
-#		if(firstTiles.get_cellv(current_tile_pos) == picked_obj_index_INITIAL):
-#			firstTiles.set_cellv(current_tile_pos, picked_obj_index)
+#		if(furniTiles.get_cellv(current_tile_pos) == picked_obj_index_INITIAL):
+#			furniTiles.set_cellv(current_tile_pos, picked_obj_index)
 	else:
 		picked_obj_index += 1
 		#Update picked object with new tile sprite
-#		if(firstTiles.get_cellv(current_tile_pos) == picked_obj_index - 1):
-#			firstTiles.set_cellv(current_tile_pos, picked_obj_index)
+#		if(furniTiles.get_cellv(current_tile_pos) == picked_obj_index - 1):
+#			furniTiles.set_cellv(current_tile_pos, picked_obj_index)
 	if(search_for_object_at(current_tile_pos) == -1 and can_place_object(current_tile_pos)):
-		firstTiles.set_cellv(current_tile_pos, picked_obj_index)
+		furniTiles.set_cellv(current_tile_pos, picked_obj_index)
 	else:
 		print("Cell occupied. Cannot rotate here.")
 		
@@ -160,7 +167,7 @@ func rotate_object_backwards():
 		picked_obj_index -= 1
 		
 	if(search_for_object_at(current_tile_pos) == -1 and can_place_object(current_tile_pos)):
-		firstTiles.set_cellv(current_tile_pos, picked_obj_index)
+		furniTiles.set_cellv(current_tile_pos, picked_obj_index)
 	else:
 		print("Cell occupied. Cannot rotate here.")
 
@@ -168,3 +175,11 @@ func can_place_object(var position : Vector2) -> bool:
 		return (PLACEMENT_MODE and 
 			groundTiles.get_cellv(position) != -1)
 			
+
+func swtich_buildable(level_name):
+	if(groundTiles.has_node(level_name)):
+		furniTiles = groundTiles.get_node(level_name)
+		furniTiles._update_offsets(true)
+		catalogue.changeCatalogue(furniTiles)
+		
+	return null

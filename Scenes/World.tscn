@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/FloorAdjust.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/World.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Assets/Tiles/Tilesets/DungeonStairs.tres" type="TileSet" id=8]
 [ext_resource path="res://Assets/Tiles/Tilesets/DungeonDecor.tres" type="TileSet" id=9]
 [ext_resource path="res://Scenes/TilemapSetup.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/Catalogue.gd" type="Script" id=11]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 2 )
@@ -24,10 +25,10 @@ cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 cell_y_sort = true
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( -393208, 51, 0, -393207, 51, 0, -393206, 51, 0, -393205, 51, 0, -393204, 51, 0, -393203, 51, 0, -327672, 51, 0, -327671, 51, 0, -327670, 51, 0, -327669, 51, 0, -327668, 51, 0, -327667, 51, 0, -262136, 51, 0, -262135, 51, 0, -262134, 51, 0, -262133, 51, 0, -262132, 51, 0, -262131, 51, 0, -196600, 52, 0, -196599, 52, 0, -196598, 52, 0, -196597, 52, 0, -196596, 20, 0, -196595, 52, 0, -131064, 52, 0, -131063, 52, 0, -131062, 48, 0, -131061, 52, 0, -131060, 52, 0, -131059, 52, 0, -65528, 52, 0, -65527, 52, 0, -65526, 52, 0, -65525, 52, 0, -65524, 51, 0, -65523, 52, 0, 8, 47, 0, 9, 22, 0, 10, 20, 0, 11, 51, 0, 12, 48, 0, 13, 52, 0, 65544, 42, 0, 65545, 34, 0, 65546, 42, 0, 65547, 42, 0, 65548, 34, 0, 65549, 42, 0, 131082, 17, 0, 131083, 16, 0, 196618, 10, 0, 196619, 8, 0 )
+tile_data = PoolIntArray( -1507318, 52, 0, -1507317, 52, 0, -1441782, 52, 0, -1441781, 52, 0, -1376246, 52, 0, -1376245, 52, 0, -1310710, 52, 0, -1310709, 52, 0, -1245174, 52, 0, -1245173, 52, 0, -1179638, 52, 0, -1179637, 52, 0, -1114102, 52, 0, -1114101, 52, 0, -1048566, 52, 0, -1048565, 52, 0, -983033, 6, 0, -983032, 6, 0, -983031, 6, 0, -983030, 50, 0, -983029, 47, 0, -983028, 6, 0, -983027, 6, 0, -983026, 6, 0, -917497, 6, 0, -917496, 15, 0, -917495, 6, 0, -917494, 44, 0, -917493, 52, 0, -917492, 6, 0, -917491, 15, 0, -917490, 6, 0, -851961, 6, 0, -851960, 6, 0, -851959, 27, 0, -851958, 52, 0, -851957, 51, 0, -851956, 25, 0, -851955, 6, 0, -851954, 6, 0, -786425, 6, 0, -786424, 6, 0, -786423, 51, 0, -786422, 51, 0, -786421, 52, 0, -786420, 51, 0, -786419, 6, 0, -786418, 6, 0, -720889, 6, 0, -720888, 6, 0, -720887, 22, 0, -720886, 20, 0, -720885, 21, 0, -720884, 23, 0, -720883, 6, 0, -720882, 6, 0, -655353, 7, 0, -655352, 26, 0, -655351, 38, 0, -655350, 38, 0, -655349, 38, 0, -655348, 30, 0, -655347, 24, 0, -655346, 7, 0, -589817, 7, 0, -589816, 4, 0, -589815, 4, 0, -589814, 4, 0, -589813, 4, 0, -589812, 4, 0, -589811, 4, 0, -589810, 7, 0, -524281, 7, 0, -524280, 4, 0, -524279, 4, 0, -524278, 4, 0, -524277, 4, 0, -524276, 4, 0, -524275, 4, 0, -524274, 7, 0, -458745, 27, 0, -458744, 37, 0, -458743, 37, 0, -458742, 37, 0, -458741, 37, 0, -458740, 37, 0, -458739, 37, 0, -458738, 25, 0, -393209, 35, 0, -393208, 51, 0, -393207, 0, 0, -393206, 51, 0, -393205, 51, 0, -393204, 51, 0, -393203, 51, 0, -393202, 32, 0, -327673, 35, 0, -327672, 51, 0, -327671, 51, 0, -327670, 51, 0, -327669, 44, 0, -327668, 51, 0, -327667, 51, 0, -327666, 32, 0, -262137, 35, 0, -262136, 51, 0, -262135, 43, 0, -262134, 51, 0, -262133, 51, 0, -262132, 51, 0, -262131, 51, 0, -262130, 32, 0, -196601, 35, 0, -196600, 52, 0, -196599, 52, 0, -196598, 52, 0, -196597, 52, 0, -196596, 20, 0, -196595, 52, 0, -196594, 32, 0, -131065, 35, 0, -131064, 52, 0, -131063, 52, 0, -131062, 48, 0, -131061, 52, 0, -131060, 52, 0, -131059, 52, 0, -131058, 32, 0, -65529, 35, 0, -65528, 52, 0, -65527, 52, 0, -65526, 53, 0, -65525, 53, 0, -65524, 51, 0, -65523, 52, 0, -65522, 28, 0, 7, 35, 0, 8, 47, 0, 9, 22, 0, 10, 20, 0, 11, 51, 0, 12, 48, 0, 13, 52, 0, 14, 32, 0, 65543, 19, 0, 65544, 42, 0, 65545, 34, 0, 65546, 42, 0, 65547, 42, 0, 65548, 34, 0, 65549, 42, 0, 65550, 24, 0, 131080, 6, 0, 131081, 6, 0, 131082, 11, 0, 131083, 9, 0, 131084, 6, 0, 131085, 6, 0, 196616, 6, 0, 196617, 6, 0, 196618, 10, 0, 196619, 8, 0, 196620, 6, 0, 196621, 6, 0, 262152, 6, 0, 262153, 6, 0, 262154, 6, 0, 262155, 6, 0, 262156, 6, 0, 262157, 6, 0 )
 script = ExtResource( 1 )
 
-[node name="Walls" type="TileMap" parent="Level0/Floor"]
+[node name="WallsBack" type="TileMap" parent="Level0/Floor"]
 mode = 1
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 256, 128 )
@@ -35,7 +36,7 @@ cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 cell_y_sort = true
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( -65528, 10, 0, -65527, 26, 0, -65526, 62, 0, -65525, 62, 0, -65524, 6, 0, -65523, 10, 0 )
+tile_data = PoolIntArray( -393208, 38, 0, -393207, 70, 0, -393206, 70, 0, -393205, 70, 0, -393204, 70, 0, -327672, 28, 0, -262136, 28, 0, -196600, 76, 0, -131064, 36, 0, -131063, 25, 0, -131062, 61, 0, -131061, 61, 0 )
 script = ExtResource( 10 )
 
 [node name="Furni" type="TileMap" parent="Level0/Floor"]
@@ -45,6 +46,7 @@ cell_size = Vector2( 256, 128 )
 cell_y_sort = true
 centered_textures = true
 format = 1
+tile_data = PoolIntArray( -393208, 5, 0, -131060, 48, 0 )
 script = ExtResource( 10 )
 
 [node name="Decor" type="TileMap" parent="Level0/Floor"]
@@ -55,14 +57,24 @@ cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 cell_y_sort = true
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( -196600, 9, 0 )
+script = ExtResource( 10 )
+
+[node name="WallsFront" type="TileMap" parent="Level0/Floor"]
+mode = 1
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 256, 128 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+cell_y_sort = true
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( -851959, 33, 0, -851956, 32, 0, -393203, 82, 0, -327667, 11, 0, -262131, 11, 0, -196595, 11, 0, -131060, 17, 0, -131059, 23, 0 )
 script = ExtResource( 10 )
 
 [node name="Level1" type="Node2D" parent="."]
 visible = false
 
 [node name="Floor" type="TileMap" parent="Level1"]
-position = Vector2( 0, -128 )
+position = Vector2( 0, -180 )
 mode = 1
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 256, 128 )
@@ -70,7 +82,7 @@ cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 cell_y_sort = true
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( -393208, 51, 0, -393207, 51, 0, -393206, 51, 0, -393205, 51, 0, -393204, 51, 0, -393203, 51, 0, -327672, 51, 0, -327671, 51, 0, -327670, 51, 0, -327669, 51, 0, -327668, 51, 0, -327667, 51, 0, -262136, 51, 0, -262135, 51, 0, -262134, 51, 0, -262133, 51, 0, -262132, 51, 0, -262131, 51, 0, -196600, 52, 0, -196599, 52, 0, -196598, 52, 0, -196597, 52, 0, -196596, 20, 0, -196595, 52, 0, -131064, 52, 0, -131063, 52, 0, -131062, 48, 0, -131061, 52, 0, -131060, 52, 0, -131059, 52, 0, -65528, 52, 0, -65527, 52, 0, -65526, 52, 0, -65525, 52, 0, -65524, 51, 0, -65523, 52, 0, 8, 47, 0, 9, 22, 0, 10, 20, 0, 11, 51, 0, 12, 48, 0, 13, 52, 0, 65544, 42, 0, 65545, 34, 0, 65546, 42, 0, 65547, 42, 0, 65548, 34, 0, 65549, 42, 0, 131082, 17, 0, 131083, 16, 0, 196618, 10, 0, 196619, 8, 0 )
+tile_data = PoolIntArray( -393208, 51, 0, -393207, 51, 0, -393206, 51, 0, -393205, 51, 0, -393204, 51, 0, -327672, 51, 0, -327671, 51, 0, -327670, 51, 0, -327669, 51, 0, -327668, 51, 0, -327667, 51, 0, -262136, 51, 0, -262135, 51, 0, -262134, 51, 0, -262133, 51, 0, -262132, 51, 0, -262131, 51, 0, -196600, 52, 0, -196599, 52, 0, -196598, 52, 0, -196597, 52, 0, -196596, 20, 0, -196595, 52, 0, -131064, 15, 0, -131063, 52, 0, -131062, 48, 0, -131061, 52, 0, -131060, 52, 0, -131059, 15, 0 )
 script = ExtResource( 1 )
 
 [node name="Walls" type="TileMap" parent="Level1/Floor"]
@@ -81,7 +93,6 @@ cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 cell_y_sort = true
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( -65528, 10, 0, -65527, 26, 0, -65526, 62, 0, -65525, 62, 0, -65524, 6, 0, -65523, 10, 0 )
 script = ExtResource( 10 )
 
 [node name="Furni" type="TileMap" parent="Level1/Floor"]
@@ -101,7 +112,6 @@ cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 cell_y_sort = true
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( -196600, 9, 0 )
 script = ExtResource( 10 )
 
 [node name="GroundArch" type="TileMap" parent="."]
@@ -130,6 +140,7 @@ script = ExtResource( 7 )
 script = ExtResource( 6 )
 
 [node name="UpFloorButton" type="Button" parent="CanvasLayer"]
+visible = false
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -150.0
@@ -144,6 +155,7 @@ __meta__ = {
 }
 
 [node name="DownFloorButton" type="Button" parent="CanvasLayer"]
+visible = false
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -150.5
@@ -157,393 +169,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
-anchor_top = 1.0
+[node name="Catalogue" type="ScrollContainer" parent="CanvasLayer"]
+anchor_top = 0.8
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1.68176
-margin_top = -83.3647
-margin_right = 1008.68
-margin_bottom = 70.6353
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 10.0
+margin_top = 5.0
+margin_right = -15.0
+margin_bottom = -5.0
+scroll_horizontal_enabled = false
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Catalogue"]
+margin_right = 999.0
+margin_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/hseparation = 10
-columns = 18
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="CanvasLayer/GridContainer"]
-margin_right = 100.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button2" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 110.0
-margin_right = 210.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button3" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 220.0
-margin_right = 320.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button4" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 330.0
-margin_right = 430.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button5" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 440.0
-margin_right = 540.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button6" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 550.0
-margin_right = 650.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button7" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 660.0
-margin_right = 760.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button8" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 770.0
-margin_right = 870.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button9" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 880.0
-margin_right = 980.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button10" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 990.0
-margin_right = 1090.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button11" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1100.0
-margin_right = 1200.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button12" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1210.0
-margin_right = 1310.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button13" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1320.0
-margin_right = 1420.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button14" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1430.0
-margin_right = 1530.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button15" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1540.0
-margin_right = 1640.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button16" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1650.0
-margin_right = 1750.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button17" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1760.0
-margin_right = 1860.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button18" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1870.0
-margin_right = 1970.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button19" type="Button" parent="CanvasLayer/GridContainer"]
-margin_top = 79.0
-margin_right = 100.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button20" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 110.0
-margin_top = 79.0
-margin_right = 210.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button21" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 220.0
-margin_top = 79.0
-margin_right = 320.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button22" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 330.0
-margin_top = 79.0
-margin_right = 430.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button23" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 440.0
-margin_top = 79.0
-margin_right = 540.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button24" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 550.0
-margin_top = 79.0
-margin_right = 650.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button25" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 660.0
-margin_top = 79.0
-margin_right = 760.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button26" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 770.0
-margin_top = 79.0
-margin_right = 870.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button27" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 880.0
-margin_top = 79.0
-margin_right = 980.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button28" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 990.0
-margin_top = 79.0
-margin_right = 1090.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button29" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1100.0
-margin_top = 79.0
-margin_right = 1200.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button30" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1210.0
-margin_top = 79.0
-margin_right = 1310.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button31" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1320.0
-margin_top = 79.0
-margin_right = 1420.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button32" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1430.0
-margin_top = 79.0
-margin_right = 1530.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button33" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1540.0
-margin_top = 79.0
-margin_right = 1640.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button34" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1650.0
-margin_top = 79.0
-margin_right = 1750.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button35" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1760.0
-margin_top = 79.0
-margin_right = 1860.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button36" type="Button" parent="CanvasLayer/GridContainer"]
-margin_left = 1870.0
-margin_top = 79.0
-margin_right = 1970.0
-margin_bottom = 154.0
-rect_min_size = Vector2( 100, 75 )
-expand_icon = true
+columns = 11
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -556,6 +202,19 @@ margin_top = 5.0
 margin_right = -11.0
 margin_bottom = 25.0
 text = "SAVE GAME"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CatButton" type="Button" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -91.0
+margin_top = 136.0
+margin_right = -7.0
+margin_bottom = 200.0
+text = "Decor"
 expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
