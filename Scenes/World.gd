@@ -2,6 +2,7 @@ extends Node2D
 
 onready var serializer = $Serializer
 onready var catalogue = get_node("CanvasLayer/Catalogue")
+onready var canvas = $CanvasLayer
 
 var current_floor = 0
 var total_floors = 2
@@ -24,23 +25,6 @@ var ROTATION_HAPPENING = false
 var objectsPlaced = []
 var dic = []
 
-
-func change_floor(sum):
-	if(current_floor + sum >= 0 and current_floor + sum < total_floors):
-		current_floor += sum
-		setTilesRefs()
-		
-func setTilesRefs():
-	groundTiles = get_current_floor().get_node("Floor")
-	furniTiles = groundTiles.get_node("Furni")
-	furniTiles._update_offsets(true)
-	
-func get_current_floor():
-	return get_node("Level" + String(current_floor))
-	
-func get_buildable_floor():
-	return get_current_floor().get_node("Floor").get_node("Furni")
-
 func _ready():
 	var pos = get_local_mouse_position()
 	var current_tile_pos = groundTiles.world_to_map(pos)
@@ -58,6 +42,24 @@ func _ready():
 			furniTiles.set_cellv(loaded_map[tile]["position"], loaded_map[tile]["id"])
 			dic.append({"position": loaded_map[tile]["position"], "id" : loaded_map[tile]["id"]})
 		dic = loaded_map
+		
+	canvas.setCategories(groundTiles.get_children())
+
+func change_floor(sum):
+	if(current_floor + sum >= 0 and current_floor + sum < total_floors):
+		current_floor += sum
+		setTilesRefs()
+		
+func setTilesRefs():
+	groundTiles = get_current_floor().get_node("Floor")
+	furniTiles = groundTiles.get_node("Furni")
+	furniTiles._update_offsets(true)
+	
+func get_current_floor():
+	return get_node("Level" + String(current_floor))
+	
+func get_buildable_floor():
+	return get_current_floor().get_node("Floor").get_node("Furni")
 
 func clear_map():
 	dic.clear()

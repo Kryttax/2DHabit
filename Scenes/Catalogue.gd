@@ -3,7 +3,6 @@ extends ScrollContainer
 
 onready var buttonGrid = $GridContainer
 
-
 onready var resources = "res://Assets/dungeon/Icons/"
 onready var root = get_node("/root/World")
 
@@ -24,6 +23,7 @@ func _ready():
 		buttonGrid.add_child(button)
 		#Next tile image (skip all rotations)
 		index+= 4
+
 
 func changeCatalogue(category):
 	var currentLevel = category
